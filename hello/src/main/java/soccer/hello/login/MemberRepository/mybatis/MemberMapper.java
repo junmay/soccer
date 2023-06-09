@@ -18,6 +18,6 @@ public interface MemberMapper {
 
     void save(Member member);
 
-    Optional<Member> findById(String id);
+    Member findById(String id);
 
 }

@@ -3,7 +3,6 @@ package soccer.hello.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import soccer.hello.login.LoginService;
 import soccer.hello.login.MemberRepository.MemberRepository;
 import soccer.hello.login.MemberRepository.mybatis.MemberMapper;
 import soccer.hello.login.MemberRepository.mybatis.MyBatisMemberRepository;
@@ -33,10 +32,7 @@ public class MyBatisConfig {
         return new MemberServiceV1(memberRepository());
     }
 
-    @Bean
-    public LoginService loginService(){
-        return new LoginService(memberRepository());
-    }
+
 
     @Bean
     public MemberRepository memberRepository() {

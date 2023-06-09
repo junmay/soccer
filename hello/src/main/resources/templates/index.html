@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,7 +8,7 @@
 
 
 <button class="w-100 btn btn-secondary btn-lg" onclick="location.href='items.html'"
-        th:onclick="|location.href='@{/}'|"
+        th:onclick="|location.href='@{welcome}'|"
         type="button">취소</button>
 
 

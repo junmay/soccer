@@ -16,14 +16,16 @@ import soccer.hello.domain.Member;
 //import javax.validation.Valid;
 import jakarta.validation.Valid;
 import soccer.hello.login.LoginForm;
-import soccer.hello.login.LoginService;
 import soccer.hello.login.SessionConst;
+import soccer.hello.login.service.MemberService;
 
 @Slf4j
 @Controller
 @RequiredArgsConstructor
 public class LoginController {
-    private final LoginService loginService;
+
+    private final MemberService memberService;
+
 
 
     @GetMapping("/welcome")
@@ -43,7 +45,7 @@ public class LoginController {
             return "login/loginForm";
         }
 
-        Member loginMember = loginService.login(form.getLoginId(), form.getPassword());
+        Member loginMember = memberService.login(form.getLoginId(), form.getPassword());
 
         if (loginMember == null) {
             // reject() 전역오류에 에러 메세지 추가
@@ -68,7 +70,7 @@ public class LoginController {
             return "login/loginForm";
         }
 
-        Member loginMember = loginService.login(form.getLoginId(), form.getPassword());
+        Member loginMember = memberService.login(form.getLoginId(), form.getPassword());
 
         if (loginMember == null) {
             bindingResult.reject("loginFail", "아이디 또는 비밀번호가 맞지 않습니다.");

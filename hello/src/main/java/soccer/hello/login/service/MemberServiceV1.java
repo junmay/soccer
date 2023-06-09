@@ -21,8 +21,15 @@ public class MemberServiceV1 implements MemberService {
 
 
     @Override
-    public Optional<Member> findById(String id) {
+    public Member findById(String id) {
         return memberRepository.findById(id);
+    }
+    @Override
+    public Member login(String id, String password){
+
+        Member member = memberRepository.findById(id);
+
+        return null;
     }
 
 }
