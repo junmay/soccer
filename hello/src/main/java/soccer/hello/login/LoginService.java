@@ -2,12 +2,14 @@ package soccer.hello.login;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import soccer.hello.domain.Member;
+import soccer.hello.login.MemberRepository.MemberRepository;
 
 @Service
 @RequiredArgsConstructor
 public class LoginService {
 
-//    private final MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 
     /**
      * @return null 로그인 실패
