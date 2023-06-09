@@ -24,6 +24,15 @@ import soccer.hello.login.SessionConst;
 @RequiredArgsConstructor
 public class LoginController {
     private final LoginService loginService;
+
+
+    @GetMapping("/welcome")
+    public String hihi()
+    {
+        return "/welcome.html";
+    }
+
+
     @GetMapping("/login")
     public String loginForm(@ModelAttribute("loginForm") LoginForm form){
         return "login/loginForm";
