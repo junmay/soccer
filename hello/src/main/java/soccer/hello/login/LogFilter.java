@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Slf4j
-public class LogFilter implements Filter {
+public class LogFilter implements Filtrr {
 
     // 왜 아래 함수를 구현하는가? 왜 throws ServletException을 하는가?
     // Filter 인터페이스를 implements 했기 때문에
