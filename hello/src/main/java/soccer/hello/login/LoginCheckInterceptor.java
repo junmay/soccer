@@ -1,6 +1,5 @@
 package soccer.hello.login;
 
-import hello.login.web.SessionConst;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.HandlerInterceptor;
 
