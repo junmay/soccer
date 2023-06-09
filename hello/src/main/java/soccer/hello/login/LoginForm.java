@@ -3,7 +3,7 @@ package soccer.hello.login;
 
 import lombok.Data;
 
-import javax.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotEmpty;
 
 // 로그인에 필요한 정보는 ID/Passwd 만 필요하므로 별도의 LoginForm을 생성한다.
 @Data

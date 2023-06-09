@@ -1,7 +1,5 @@
 package soccer.hello.login;
 
-import hello.login.domain.member.Member;
-import hello.login.domain.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +7,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LoginService {
 
-    private final MemberRepository memberRepository;
+//    private final MemberRepository memberRepository;
 
     /**
      * @return null 로그인 실패
