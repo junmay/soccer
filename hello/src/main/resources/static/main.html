@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Box Model Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #eebbc3;
+        }
+
+        .nav {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .section {
+            width: 100%;
+            height: 300px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff2ae;
+            display: inline-block;
+        }
+
+
+        .footer {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+            background-color: #4f4f4f;
+            color: #fff;
+        }
+        .match {
+            list-style: none;
+        }
+        .matchDay {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>sport t.t.</h1>
+</div>
+
+<div class="nav">
+    <ul>
+        <li><a href="#">리그</a></li>
+        <li><a href="#">팀 정보</a></li>
+        <li><a href="#">선수 검색</a></li>
+        <li><a href="#">경기 일정</a></li>
+    </ul>
+</div>
+
+<div class="section">
+    <p class="matchDay">5월 29일</p>
+    <li class="match">
+        <a href="#">팀1</a>
+        0:0
+        <a href="#">팀2</a>
+    </li>
+</div>
+
+<div class="footer">
+    <p>Footer</p>
+</div>
+</body>
+</html>
