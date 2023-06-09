@@ -29,6 +29,10 @@ public class MemberServiceV1 implements MemberService {
 
         Member member = memberRepository.findById(id);
 
+        if(member.getMemberPassword().equals(password)){
+            return member;
+        }
+
         return null;
     }
 

@@ -26,60 +26,32 @@ public class LoginController {
 
     private final MemberService memberService;
 
-
-
     @GetMapping("/welcome")
     public String hihi()
     {
         return "/welcome.html";
     }
 
-
     @GetMapping("/login")
     public String loginForm(@ModelAttribute("loginForm") LoginForm form){
         return "login/loginForm";
     }
-    //    @PostMapping("/login")
-    public String login(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response) {
-        if (bindingResult.hasErrors()) {
-            return "login/loginForm";
-        }
 
-        Member loginMember = memberService.login(form.getLoginId(), form.getPassword());
-
-        if (loginMember == null) {
-            // reject() 전역오류에 에러 메세지 추가
-            // 추가된 내용은 View Template(Thymeleaf에 전달)
-            bindingResult.reject("loginFail", "아이디 또는 비밀번호가 맞지 않습니다.");
-            return "login/loginForm";
-        }
-
-        //로그인 성공 처리
-
-        //쿠키에 시간 정보를 주지 않으면 세션 쿠키(브라우저 종료시 모두 종료)
-//        로그인에 성공하면 쿠키를 생성하고 HttpServletResponse 에 담는다. 쿠키 이름은 memberId 이고, 값은
-//        회원의 id 를 담아둔다. 웹 브라우저는 종료 전까지 회원의 id 를 서버에 계속 보내줄 것이다.
-        Cookie idCookie = new Cookie("memberId", String.valueOf(loginMember.getMemberId()));
-        response.addCookie(idCookie);
-        return "redirect:/";
-    }
     @PostMapping("/login")
     public String loginV3(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletRequest request) {
-        int result = 10 / 0; // 강제 예외 발생
+//        int result = 10 / 0; // 강제 예외 발생
         if (bindingResult.hasErrors()) {
             return "login/loginForm";
         }
 
         Member loginMember = memberService.login(form.getLoginId(), form.getPassword());
+        log.info("LoginController] loginMember = " + loginMember);
 
         if (loginMember == null) {
             bindingResult.reject("loginFail", "아이디 또는 비밀번호가 맞지 않습니다.");
             return "login/loginForm";
         }
 
-        //로그인 성공 처리
-        //세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성 (기본 인자값이 true임)
-        // session id는 getSession 메소드에서 생성
         HttpSession session = request.getSession();
         //세션에 로그인 회원 정보 보관
         session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
