@@ -11,7 +11,7 @@ public class MemberSearchCond {
     public MemberSearchCond() {
     }
 
-    public MemberSearchCond(String memberId, String mmemberPassword) {
+    public MemberSearchCond(String memberId, String memberPassword) {
         this.memberId = memberId;
         this.memberPassword = memberPassword;
     }
