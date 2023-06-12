@@ -29,7 +29,10 @@ public class MemberServiceV1 implements MemberService {
     @Override
     public Member login(String id, String password){
 
+        log.info("MemberServiceV1] id = " + id+  " "+password+"   아이디 및 비번체크");
         Optional<Member> member = memberRepository.findById(id);
+        log.info("MemberServiceV1");
+        log.info("MemberServiceV1] member = " + member);
 
 //        if(member.getMemberPassword().equals(password)){
 //            return member;

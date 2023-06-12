@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import soccer.hello.league.LeagueMapper;
+import soccer.hello.login.Repository.mybatis.LeagueMapper;
 import soccer.hello.league.LeagueService;
 import soccer.hello.login.Repository.LeagueRepository;
 import soccer.hello.login.Repository.MemberRepository;
