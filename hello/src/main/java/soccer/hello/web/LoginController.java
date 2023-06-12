@@ -15,6 +15,7 @@ import jakarta.servlet.http.HttpSession;
 import soccer.hello.domain.Member;
 //import javax.validation.Valid;
 import jakarta.validation.Valid;
+import soccer.hello.league.LeagueService;
 import soccer.hello.login.LoginForm;
 import soccer.hello.login.SessionConst;
 import soccer.hello.login.service.MemberService;

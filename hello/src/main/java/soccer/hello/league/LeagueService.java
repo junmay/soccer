@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class LeagueService {
+public class LeagueService implements LeagueServi{
 //    private final LeagueMapper leagueMapper;
 
     private  final LeagueRepository leagueRepository;
