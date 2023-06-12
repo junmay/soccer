@@ -23,18 +23,18 @@ public class MemberServiceV1 implements MemberService {
 
 
     @Override
-    public Member findById(String memberId) {
+    public Optional<Member> findById(String memberId) {
         log.info("MemberServiceV1] id = " + memberId);
         return memberRepository.findById(memberId);
     }
     @Override
     public Member login(String id, String password){
 
-        Member member = memberRepository.findById(id);
+        Optional<Member> member = memberRepository.findById(id);
 
-        if(member.getMemberPassword().equals(password)){
-            return member;
-        }
+//        if(member.getMemberPassword().equals(password)){
+//            return member;
+//        }
 
         return null;
     }

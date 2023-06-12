@@ -10,7 +10,7 @@ public interface MemberRepository {
 
     Member save(Member member);
 
-    Member findById(String memberId);
+    Optional<Member> findById(String memberId);
 
 
 }

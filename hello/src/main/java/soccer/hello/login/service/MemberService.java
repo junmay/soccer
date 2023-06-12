@@ -7,7 +7,7 @@ public interface MemberService {
 
     Member save(Member member);
 
-    Member findById(String id);
+    Optional<Member> findById(String id);
 
     Member login(String id, String password);
 
