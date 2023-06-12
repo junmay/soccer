@@ -4,9 +4,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import soccer.hello.login.MemberRepository.MemberRepository;
-import soccer.hello.login.MemberRepository.mybatis.MemberMapper;
-import soccer.hello.login.MemberRepository.mybatis.MyBatisMemberRepository;
+import soccer.hello.league.LeagueMapper;
+import soccer.hello.league.LeagueService;
+import soccer.hello.login.Repository.LeagueRepository;
+import soccer.hello.login.Repository.MemberRepository;
+import soccer.hello.login.Repository.mybatis.MemberMapper;
+import soccer.hello.login.Repository.mybatis.MyBatisLeagueRepository;
+import soccer.hello.login.Repository.mybatis.MyBatisMemberRepository;
 import soccer.hello.login.service.MemberService;
 import soccer.hello.login.service.MemberServiceV1;
 
@@ -28,6 +32,7 @@ import soccer.hello.login.service.MemberServiceV1;
 public class MyBatisConfig {
 
     private final MemberMapper memberMapper;
+    private final LeagueMapper leagueMapper;
 
     @Bean
     public MemberService memberService() {
@@ -41,5 +46,18 @@ public class MyBatisConfig {
     public MemberRepository memberRepository() {
         return new MyBatisMemberRepository(memberMapper);
     }
+
+
+
+    @Bean
+    LeagueRepository leagueRepository(){
+        return new MyBatisLeagueRepository(leagueMapper);
+    }
+
+    @Bean
+    public LeagueService leagueService(){
+        return new LeagueService(leagueRepository());
+    }
+
 
 }

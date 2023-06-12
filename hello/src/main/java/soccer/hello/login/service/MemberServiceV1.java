@@ -2,11 +2,10 @@ package soccer.hello.login.service;
 
 import lombok.extern.slf4j.Slf4j;
 import soccer.hello.domain.Member;
-import soccer.hello.login.MemberRepository.*;
+import soccer.hello.login.Repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service

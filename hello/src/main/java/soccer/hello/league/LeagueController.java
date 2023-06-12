@@ -14,8 +14,8 @@ public class LeagueController {
         this.leagueService = leagueService;
     }
 
-    @GetMapping("/leagues")
-    public List<League> getAllLeagues() {
-        return leagueService.getAllLeagues();
-    }
+//    @GetMapping("/leagues")
+//    public List<League> getAllLeagues() {
+//        return leagueService.getAllLeagues();
+//    }
 }

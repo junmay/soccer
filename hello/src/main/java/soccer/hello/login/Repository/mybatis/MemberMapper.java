@@ -1,10 +1,7 @@
-package soccer.hello.login.MemberRepository.mybatis;
+package soccer.hello.login.Repository.mybatis;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 import java.util.Optional;
 import soccer.hello.domain.Member;
 

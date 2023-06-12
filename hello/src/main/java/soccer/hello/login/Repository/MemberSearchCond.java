@@ -1,4 +1,4 @@
-package soccer.hello.login.MemberRepository;
+package soccer.hello.login.Repository;
 
 import lombok.Data;
 
