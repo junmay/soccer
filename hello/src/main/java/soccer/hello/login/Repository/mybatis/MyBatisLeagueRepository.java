@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import soccer.hello.league.League;
-import soccer.hello.league.LeagueMapper;
 import soccer.hello.login.Repository.LeagueRepository;
 
 import java.util.List;
