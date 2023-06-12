@@ -1,4 +1,4 @@
-package soccer.hello.teamrepository.mybatis;
+package soccer.hello.teamRepository.mybatis;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

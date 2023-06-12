@@ -1,4 +1,4 @@
-package soccer.hello.teamrepository.mybatis;
+package soccer.hello.teamRepository.mybatis;
 
 import org.apache.ibatis.annotations.Select;
 import soccer.hello.domain.Team;
