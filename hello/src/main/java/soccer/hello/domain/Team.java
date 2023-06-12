@@ -9,5 +9,12 @@ public class Team {
     private String teamName;
     private String league;
 
-
+    @Override
+    public String toString() {
+        return "Team{" +
+                "teamId=" + teamId +
+                ", teamName='" + teamName + '\'' +
+                ", league='" + league + '\'' +
+                '}';
+}
 }
