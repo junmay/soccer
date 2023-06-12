@@ -1,4 +1,4 @@
-package soccer.hello.league;
+package soccer.hello.domain;
 
 
 import lombok.Data;

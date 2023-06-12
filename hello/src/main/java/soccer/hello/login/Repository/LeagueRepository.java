@@ -1,10 +1,8 @@
 package soccer.hello.login.Repository;
 
-import soccer.hello.domain.Member;
-import soccer.hello.league.League;
+import soccer.hello.domain.League;
 
 import java.util.List;
-import java.util.Optional;
 
 
 public interface LeagueRepository {
