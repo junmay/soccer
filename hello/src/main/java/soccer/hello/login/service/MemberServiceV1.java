@@ -34,9 +34,9 @@ public class MemberServiceV1 implements MemberService {
         log.info("MemberServiceV1");
         log.info("MemberServiceV1] member = " + member);
 
-//        if(member.getMemberPassword().equals(password)){
-//            return member;
-//        }
+        if(member.get().getMemberPassword().equals(password)){
+            return member.get();
+        }
 
         return null;
     }

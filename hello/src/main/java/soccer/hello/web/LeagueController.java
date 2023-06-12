@@ -26,7 +26,7 @@ public class LeagueController {
     public String getAll(){
         log.info("dddd");
         log.info(leagueService.getAllLeagues()+"");
-        return "/";
+        return "index";
     }
 
 
