@@ -1,24 +1,24 @@
-package soccer.hello.league;
+package soccer.hello.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import soccer.hello.domain.League;
-import soccer.hello.domain.Player;
-import soccer.hello.login.Repository.LeagueRepository;
-import soccer.hello.login.Repository.PlayerRepository;
+import soccer.hello.domain.Team;
+import soccer.hello.Repository.TeamRepository;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PlayerService implements PlayerServi{
+public class TeamServiceV1 implements TeamService{
 //    private final LeagueMapper leagueMapper;
 
-    private  final PlayerRepository playerRepository;
+    private  final TeamRepository teamRepository;
 
 
-    public List<Player> getAllPlayers(){
-        return PlayerRepository.getAllPlayers();
+
+    @Override
+    public List<Team> getAllTeam(){
+       return teamRepository.getAllTeam();
     }
 
 

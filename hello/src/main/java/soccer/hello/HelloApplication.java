@@ -2,11 +2,8 @@ package soccer.hello;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import soccer.hello.config.MyBatisConfig;
-import soccer.hello.league.LeagueService;
 
 @Import(MyBatisConfig.class)
 @SpringBootApplication(scanBasePackages = "soccer.hello.web")

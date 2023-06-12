@@ -1,4 +1,4 @@
-package soccer.hello.login.Repository.mybatis;
+package soccer.hello.Repository.mybatis;
 
 
 import soccer.hello.domain.Member;
@@ -6,7 +6,7 @@ import soccer.hello.domain.Member;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
-import soccer.hello.login.Repository.MemberRepository;
+import soccer.hello.Repository.MemberRepository;
 
 import java.util.Optional;
 

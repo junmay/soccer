@@ -1,11 +1,11 @@
-package soccer.hello.login.Repository.mybatis;
+package soccer.hello.Repository.mybatis;
 
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import soccer.hello.domain.League;
-import soccer.hello.login.Repository.LeagueRepository;
+import soccer.hello.Repository.LeagueRepository;
 
 import java.util.List;
 

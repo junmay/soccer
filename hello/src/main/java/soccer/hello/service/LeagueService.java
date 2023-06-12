@@ -1,9 +1,9 @@
-package soccer.hello.league;
+package soccer.hello.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import soccer.hello.domain.League;
-import soccer.hello.login.Repository.LeagueRepository;
+import soccer.hello.Repository.LeagueRepository;
 
 import java.util.List;
 

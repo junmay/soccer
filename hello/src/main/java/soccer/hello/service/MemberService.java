@@ -1,4 +1,4 @@
-package soccer.hello.login.service;
+package soccer.hello.service;
 import soccer.hello.domain.Member;
 import java.util.Optional;
 

@@ -1,18 +1,19 @@
-package soccer.hello.login.Repository;
+package soccer.hello.Repository;
 
 import soccer.hello.domain.League;
+import soccer.hello.domain.Team;
 
 import java.util.List;
 
 
-public interface LeagueRepository {
+public interface TeamRepository {
 
 //    Member save(Member member);
 
 //    Optional<Member> findById(String memberId);
 
 
-    List<League> getAllLeagues();
+    List<Team> getAllTeam();
 
 
 }
