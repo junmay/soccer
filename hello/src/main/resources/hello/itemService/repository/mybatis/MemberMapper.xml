@@ -19,7 +19,7 @@
     <select id="findById" resultType="Member">
         select member_id, member_password
         from member
-        where member_id = #{memberId}
+        where member_id = #{id}
     </select>
 
 </mapper>
