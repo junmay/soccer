@@ -1,13 +1,15 @@
 package soccer.hello.config;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import soccer.hello.login.MemberRepository.MemberRepository;
-import soccer.hello.login.MemberRepository.mybatis.MemberMapper;
-import soccer.hello.login.MemberRepository.mybatis.MyBatisMemberRepository;
-import soccer.hello.login.service.MemberService;
-import soccer.hello.login.service.MemberServiceV1;
+import soccer.hello.Repository.PlayerRepository;
+import soccer.hello.Repository.mybatis.*;
+import soccer.hello.service.*;
+import soccer.hello.Repository.TeamRepository;
+import soccer.hello.Repository.LeagueRepository;
+import soccer.hello.Repository.MemberRepository;
 
 /**
  * @Configuration 어노테이션은 스프링에서 Java 기반의 설정 클래스임을 나타내는 어노테이션입니다.
@@ -22,13 +24,32 @@ import soccer.hello.login.service.MemberServiceV1;
  * 메소드 단위로 스프링 빈을 등록할 수 있도록 지원합니다.
   */
 @Configuration
+@Slf4j
 @RequiredArgsConstructor
 public class MyBatisConfig {
 
     private final MemberMapper memberMapper;
+    private final LeagueMapper leagueMapper;
+    private final TeamMapper teamMapper;
+    private final PlayerMapper playerMapper;
+
+
+    @Bean
+    public TeamRepository teamRepository(){
+        return new MyBatisTeamRepository(teamMapper);
+    }
+
+
+    @Bean
+    public TeamService teamService(){
+        return new TeamServiceV1(teamRepository());
+    }
+
+
 
     @Bean
     public MemberService memberService() {
+        log.info("MyBatisConfig] memberMapper = " + memberMapper + "생성완료");
         return new MemberServiceV1(memberRepository());
     }
 
@@ -38,5 +59,34 @@ public class MyBatisConfig {
     public MemberRepository memberRepository() {
         return new MyBatisMemberRepository(memberMapper);
     }
+
+
+
+    @Bean
+    LeagueRepository leagueRepository(){
+        return new MyBatisLeagueRepository(leagueMapper);
+    }
+
+    @Bean
+    public LeagueService leagueService(){
+        return new LeagueService(leagueRepository());
+    }
+
+    @Bean
+    public PlayerRepository playerRepository(){
+        return new MyBatisPlayerRepository(playerMapper);
+    }
+    @Bean
+    public PlayerServi playerService(){
+        return new PlayerService(playerRepository());
+    }
+
+
+
+
+
+
+
+
 
 }

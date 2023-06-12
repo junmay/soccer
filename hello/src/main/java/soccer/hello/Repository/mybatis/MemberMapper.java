@@ -1,10 +1,7 @@
-package soccer.hello.login.MemberRepository.mybatis;
+package soccer.hello.Repository.mybatis;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 import java.util.Optional;
 import soccer.hello.domain.Member;
 
@@ -18,6 +15,6 @@ public interface MemberMapper {
 
     void save(Member member);
 
-    Member findById(String id);
+    Optional<Member> findById(String id);
 
 }

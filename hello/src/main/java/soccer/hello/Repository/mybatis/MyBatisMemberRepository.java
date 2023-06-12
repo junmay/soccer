@@ -1,4 +1,4 @@
-package soccer.hello.login.MemberRepository.mybatis;
+package soccer.hello.Repository.mybatis;
 
 
 import soccer.hello.domain.Member;
@@ -6,7 +6,7 @@ import soccer.hello.domain.Member;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
-import soccer.hello.login.MemberRepository.MemberRepository;
+import soccer.hello.Repository.MemberRepository;
 
 import java.util.Optional;
 
@@ -26,7 +26,8 @@ public class MyBatisMemberRepository implements MemberRepository {
 
 
     @Override
-    public Member findById(String id) {
+    public Optional<Member> findById(String id) {
+        log.info("MyBatisMemberRepository의 findById 매서드 실행");
         return memberMapper.findById(id);
     }
 

@@ -17,7 +17,7 @@ import soccer.hello.domain.Member;
 import jakarta.validation.Valid;
 import soccer.hello.login.LoginForm;
 import soccer.hello.login.SessionConst;
-import soccer.hello.login.service.MemberService;
+import soccer.hello.service.MemberService;
 
 @Slf4j
 @Controller
@@ -34,16 +34,20 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginForm(@ModelAttribute("loginForm") LoginForm form){
+        log.info("LoginController login get mapping");
         return "login/loginForm";
+
     }
+
 
     @PostMapping("/login")
     public String loginV3(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletRequest request) {
 //        int result = 10 / 0; // 강제 예외 발생
+        log.info("LoginController] form = " + form);
         if (bindingResult.hasErrors()) {
-            return "login/loginForm";
+//            return "login/loginForm";
         }
-
+        log.info("1");
         Member loginMember = memberService.login(form.getLoginId(), form.getPassword());
         log.info("LoginController] loginMember = " + loginMember);
 
@@ -51,7 +55,7 @@ public class LoginController {
             bindingResult.reject("loginFail", "아이디 또는 비밀번호가 맞지 않습니다.");
             return "login/loginForm";
         }
-
+        log.info("2");
         HttpSession session = request.getSession();
         //세션에 로그인 회원 정보 보관
         session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
