@@ -1,4 +1,4 @@
-package soccer.hello.team;
+package soccer.hello.domain;
 
 public class Team {
     private int teamId;

@@ -4,7 +4,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import soccer.hello.team.Team;
+import soccer.hello.domain.Team;
 
 import java.io.IOException;
 import java.util.List;
