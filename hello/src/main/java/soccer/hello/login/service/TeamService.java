@@ -1,4 +1,4 @@
-package soccer.hello.league;
+package soccer.hello.login.service;
 
 import soccer.hello.domain.League;
 import soccer.hello.domain.Team;
