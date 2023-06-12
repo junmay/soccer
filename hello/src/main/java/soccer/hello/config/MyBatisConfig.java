@@ -12,6 +12,7 @@ import soccer.hello.login.Repository.LeagueRepository;
 import soccer.hello.login.Repository.MemberRepository;
 import soccer.hello.login.service.MemberService;
 import soccer.hello.login.service.MemberServiceV1;
+import soccer.hello.login.service.TeamServiceV1;
 
 /**
  * @Configuration 어노테이션은 스프링에서 Java 기반의 설정 클래스임을 나타내는 어노테이션입니다.
@@ -37,13 +38,13 @@ public class MyBatisConfig {
 
     @Bean
     public TeamRepository teamRepository(){
-        return new TeamRepository(teamMapper);
+        return new MyBatisTeamRepository(teamMapper);
     }
 
 
     @Bean
     public TeamService teamService(){
-        return new TeamService(teamRepository());
+        return new TeamServiceV1(teamRepository());
     }
 
 
