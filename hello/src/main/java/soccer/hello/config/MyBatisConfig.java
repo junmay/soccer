@@ -1,6 +1,7 @@
 package soccer.hello.config;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import soccer.hello.login.MemberRepository.MemberRepository;
@@ -22,6 +23,7 @@ import soccer.hello.login.service.MemberServiceV1;
  * 메소드 단위로 스프링 빈을 등록할 수 있도록 지원합니다.
   */
 @Configuration
+@Slf4j
 @RequiredArgsConstructor
 public class MyBatisConfig {
 
@@ -29,6 +31,7 @@ public class MyBatisConfig {
 
     @Bean
     public MemberService memberService() {
+        log.info("MyBatisConfig] memberMapper = " + memberMapper + "생성완료");
         return new MemberServiceV1(memberRepository());
     }
 

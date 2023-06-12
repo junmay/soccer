@@ -1,5 +1,6 @@
 package soccer.hello.login.service;
 
+import lombok.extern.slf4j.Slf4j;
 import soccer.hello.domain.Member;
 import soccer.hello.login.MemberRepository.*;
 import lombok.RequiredArgsConstructor;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class MemberServiceV1 implements MemberService {
 
@@ -22,6 +24,7 @@ public class MemberServiceV1 implements MemberService {
 
     @Override
     public Member findById(String id) {
+        log.info("MemberServiceV1] id = " + id);
         return memberRepository.findById(id);
     }
     @Override

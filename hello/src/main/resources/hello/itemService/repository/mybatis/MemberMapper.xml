@@ -7,13 +7,13 @@
 <mapper namespace="soccer.hello.login.MemberRepository.mybatis.MemberMapper">
 
 <!--나중에 수정해야함-->
-    <insert id="save" useGeneratedKeys="true" keyProperty="id">
-        <selectKey keyProperty="id" resultType="java.lang.Long" order="BEFORE">
-            SELECT item_seq.NEXTVAL FROM DUAL
-        </selectKey>
-        INSERT INTO item (id, item_name, price, quantity)
-        VALUES (#{id}, #{itemName}, #{price}, #{quantity})
-    </insert>
+<!--    <insert id="save" useGeneratedKeys="true" keyProperty="id">-->
+<!--        <selectKey keyProperty="id" resultType="java.lang.Long" order="BEFORE">-->
+<!--            SELECT item_seq.NEXTVAL FROM DUAL-->
+<!--        </selectKey>-->
+<!--        INSERT INTO item (id, item_name, price, quantity)-->
+<!--        VALUES (#{id}, #{itemName}, #{price}, #{quantity})-->
+<!--    </insert>-->
 
 
     <select id="findById" resultType="Member">

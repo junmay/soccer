@@ -26,8 +26,9 @@ public class MyBatisMemberRepository implements MemberRepository {
 
 
     @Override
-    public Member findById(String id) {
-        return memberMapper.findById(id);
+    public Member findById(String member_Id) {
+        log.info("MyBatisMemberRepository의 findById 매서드 실행");
+        return memberMapper.findById(member_Id);
     }
 
 }
