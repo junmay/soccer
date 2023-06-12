@@ -11,7 +11,7 @@
             height: 200px;
             padding: 0px;
         }
-        .header2 {
+        .header2 .header3 {
             width: 70%;
             padding: 20px;
             background-color: #CCCCCC;
@@ -19,7 +19,7 @@
             padding: 0px;
             margin: 0 auto;
         }
-        .header2 h1 {
+        .header2 h1 .header3 h1{
             margin-top: 0px;
         }
         .header3 {
@@ -89,6 +89,23 @@
             /*flex-flow: column nowrap;*/
             margin: 0 auto;
         }
+        .container1 {
+            width: 70%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*flex-flow: column nowrap;*/
+            margin: 0 auto;
+        }
+        .item1 {
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 15px;
+            position: relative;
+        }
+
         .profile {
             width: 400px;
             height: 500px;
@@ -123,6 +140,9 @@
 </div>
 <div class="header3">
     <h1>22 - 23 시즌 성적</h1>
+</div>
+<div class="container1">
+    <div class="item1"></div>
 </div>
 </body>
 </html>
