@@ -22,7 +22,7 @@ public class PlayerController {
 //        return leagueService.getAllLeagues();
 //    }
 
-    @GetMapping("/players")
+//    @GetMapping("/players")
     public String getAll(){
         log.info("dddd");
         log.info(playerService.getAllPlayers()+"");
