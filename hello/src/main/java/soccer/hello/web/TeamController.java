@@ -14,6 +14,7 @@ import soccer.hello.service.TeamService;
 public class TeamController {
     private final TeamService teamService;
 
+
 //    public LeagueController(LeagueService leagueService) {
 //        this.leagueService = leagueService;
 //    }
@@ -27,11 +28,12 @@ public class TeamController {
     public String teamInfo(){
         return "teamInfo";
     }
-//   ============== 팀 ==================
+
     @GetMapping("/teamInfo/club/chelsea")
     public String chelsea() {
         return "club/chelsea";
     }
+
     @GetMapping("/teamInfo/club/liverpool")
     public String liverpool() {
         return "club/liverpool";
@@ -44,26 +46,9 @@ public class TeamController {
     public String manchester() {
         return "club/manchester";
     }
-// ============== 스쿼드 ==================
-    @GetMapping("/squad/arsenalSquad")
-    public String arsenalSquad() {
-        return "club/squad/arsenalSquad";
-    }
-    @GetMapping("/squad/chelseaSquad")
-    public String chelseaSquad() {
-        return "club/squad/chelseaSquad";
-    }
-    @GetMapping("/squad/liverpoolSquad")
-    public String liverpoolSquad() {
-        return "club/squad/liverpoolSquad";
-    }
-    @GetMapping("/squad/manchesterSquad")
-    public String manchesterSquad() {
-        return "club/squad/manchesterSquad";
-    }
-//  ============== 프로필 ==================
-    @GetMapping("/player/kepa")
-    public String kepa() {
-        return "club/squad/player/kepa";
-    }
+
+
+
+
+
 }
