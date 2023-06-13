@@ -18,7 +18,7 @@ public interface PlayerRepository {
 
     public List<Player> getAllPlayers();
 
-    public List<Player> findPlayer(Long playerId);
+    public List<Player> findPlayer(Integer playerId);
 
 
 }

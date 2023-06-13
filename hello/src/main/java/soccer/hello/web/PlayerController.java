@@ -39,23 +39,24 @@ public class PlayerController {
 //    @PostMapping
     public String findPlayer(){
         int playerId=0;
-        Player player = playerService.findPlayer(playerId).get();
-        log.info(player+"");
-
+//        Player player = playerService.findPlayer(playerId).get();
+//        log.info(player+"");
+//
         return "redircet:/p";
     }
 
-    @GetMapping("/searchp")
+//    @GetMapping("/searchp")
     public String searchPlayer(){
         return "/searchplayer";
     }
 
-    @GetMapping("/searchplayer")
+    @GetMapping("/searchPlayer")
     public String playerBy(@ModelAttribute("playerSearch")Player player, Model model) {
-
-        Player playerBy = playerService.findPlayer(player.getPlayerId()).get();
+//        public String playerBy(Player player, Model model) {
+        List<Player> playerBy = playerService.findPlayer(player.getPlayerId());
+//        Player playerBy = playerService.findPlayer(player.getPlayerId());
         model.addAttribute("playerBy", playerBy);
-        return "searchplayer";
+        return "/searchPlayer";
     }
 
 

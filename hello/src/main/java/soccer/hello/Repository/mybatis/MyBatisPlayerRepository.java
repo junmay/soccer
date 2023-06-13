@@ -19,13 +19,6 @@ public class MyBatisPlayerRepository implements PlayerRepository {
 //    private final MemberMapper memberMapper;
     private final PlayerMapper playerMapper;
 
-//    @Override
-//    public Member save(Member member) {
-//        log.info("itemMapper class={}", memberMapper.getClass());
-//        memberMapper.save(member);
-//        return member;
-//    }
-
 
 //    @Override
 //    public Optional<Member> findById(String id) {
@@ -40,8 +33,9 @@ public class MyBatisPlayerRepository implements PlayerRepository {
     }
 
     @Override
-    public List<Player> findPlayer(Long playerId){
+    public List<Player> findPlayer(Integer playerId){
         log.info("MyBatisPlayerRepository] playerId = " + playerId + "\n");
+
         return playerMapper.findPlayer(playerId);
     }
 }

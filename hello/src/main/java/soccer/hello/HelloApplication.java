@@ -14,7 +14,6 @@ public class HelloApplication {
 
 
 
-//dd //d
 	public static void main(String[] args) {
 		SpringApplication.run(HelloApplication.class, args);
 

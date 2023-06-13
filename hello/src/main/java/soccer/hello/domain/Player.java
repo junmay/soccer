@@ -5,10 +5,10 @@ import lombok.Data;
 
 @Data
 public class Player {
-    private Integer teamId;
+
     private String playerName;
     private Integer playerId;
-
+    private Integer teamId;
 
 
     @Override

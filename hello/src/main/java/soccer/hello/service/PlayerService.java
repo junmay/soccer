@@ -18,12 +18,15 @@ public class PlayerService implements PlayerServi{
     private  final PlayerRepository playerRepository;
 
 
+
+    @Override
     public List<Player> getAllPlayers(){
         return playerRepository.getAllPlayers();
     }
 
-    public List<Player> findPlayer(Long playerId){
-        log.info("PlayerService \n");
+    @Override
+    public List<Player> findPlayer(Integer playerId){
+        log.info("PlayerService \n" + playerId);
         return playerRepository.findPlayer(playerId);
     }
 

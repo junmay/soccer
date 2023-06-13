@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <style>
 
 </style>
 <link th:href="@{/css/searchplayer.css}"
       href="css/searchplayer.css" rel="stylesheet">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,17 +35,16 @@
     <!--            th:onclick="|location.href='@{/}'|">선수검색</button>-->
 
 
-
     <form th:object="${playerSearch}" method="get" class="form-inline">
         <div class="row">
             <div class="col">
-                <input type="text" th:field="*{playerId}" class="form-control"/>
+                <input type="text" th:field="*{playerId}" />
             </div>
             <div class="col">
-                <input type="text" th:field="*{playerName}" class="form-control"/>
+                <input type="text" th:field="*{playerName}" />
             </div>
             <div class="col">
-                <input type="text" th:field="*{teamId}" class="form-control" />
+                <input type="text" th:field="*{teamId}"/>
             </div>
             <div class="col">
                 <button type="submit" class="btn btn-secondary mb-2">검색</button>
@@ -60,7 +59,7 @@
             </thead>
             <tbody>
             <tr th:each="player : ${playerBy}">
-                <td><a href="#" th:text="${player.getplayerId}">선수번호</a>
+                <td><a href="#" th:text="${player.getPlayerId}">선수번호</a>
                 </td>
                 <td><a href="#" th:text="${player.getPlayerName}">선수이름</a></td>
                 <td th:text="${player.getTeamId}">팀 번호</td>
@@ -75,7 +74,7 @@
 
 
 
-<footer th:include="footer.html" class="footer">
+<footer th:insert="~{footer.html}" class="footer">
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
