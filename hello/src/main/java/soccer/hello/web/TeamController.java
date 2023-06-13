@@ -45,4 +45,9 @@ public class TeamController {
     public String manchester() {
         return "club/manchester";
     }
+    @GetMapping("/arsenal/squad/arsenalSquad")
+    public String arsenalSquad() {
+        return "club/squad/arsenalSquad";
+    }
+
 }
