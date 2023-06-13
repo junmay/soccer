@@ -32,4 +32,17 @@ public class TeamController {
     public String chelsea() {
         return "club/chelsea";
     }
+
+    @GetMapping("/teamInfo/club/liverpool")
+    public String liverpool() {
+        return "club/liverpool";
+    }
+    @GetMapping("/teamInfo/club/arsenal")
+    public String arsenal() {
+        return "club/arsenal";
+    }
+    @GetMapping("/teamInfo/club/manchester")
+    public String manchester() {
+        return "club/manchester";
+    }
 }
