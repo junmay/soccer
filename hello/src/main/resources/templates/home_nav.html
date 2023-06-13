@@ -16,12 +16,14 @@
             <li class="nav-item"><a href="#" class="nav-link">More</a></li>
           </ul>
           <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-            <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+            <li class="nav-item order-2 order-md-1"><a href="login.html" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
             <li class="dropdown order-1">
-              <button type="button" id="dropdownMenu1" data-toggle="dropdown"
-                      onclick="location.href='login.html'"
-                      th:onclick="|locathion.href='{@loginGo}'|"
-                      class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+              <a th:href="loginGo"><button type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                          class="btn btn-outline-secondary dropdown-toggle">Login </button></a><span class="caret"></span>
+<!--         onclick="location.href='login.html'"
+                      th:onclick="|location.href='{@loginGo}'|"       -->
+<!--              -->
+
               <ul class="dropdown-menu dropdown-menu-right mt-1">
                 <li class="p-3">
                   <form class="form" role="form">
