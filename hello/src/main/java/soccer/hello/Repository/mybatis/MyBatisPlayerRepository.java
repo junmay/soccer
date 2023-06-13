@@ -41,6 +41,7 @@ public class MyBatisPlayerRepository implements PlayerRepository {
 
     @Override
     public Optional<Player> findPlayer(Long playerId){
+        log.info("MyBatisPlayerRepository] playerId = " + playerId + "\n");
         return playerMapper.findPlayer(playerId);
     }
 }

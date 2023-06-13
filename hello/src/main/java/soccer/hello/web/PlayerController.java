@@ -49,11 +49,12 @@ public class PlayerController {
     @GetMapping("/searchPlayer")
     public String playerBy(@ModelAttribute("playerSearch")Player player, Model model) {
 
+        log.info("PlayerController \n \n \n 매서드는실행완료");
         Player playerBy = playerService.findPlayer(player.getPlayerId()).get();
 //        log.info("PlayerController");
         log.info("PlayerController] playerBy = " + playerBy);
         model.addAttribute("playerBy", playerBy);
-        return "searchPlayer";
+        return "/searchPlayer";
     }
 
 

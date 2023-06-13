@@ -60,10 +60,10 @@
             </thead>
             <tbody>
             <tr th:each="player : ${playerBy}">
-                <td><a href="#" th:text="${player.getplayerId}">선수번호</a>
+                <td><a href="#" th:text="${playerBy.getPlayerId()}">선수번호</a>
                 </td>
-                <td><a href="#" th:text="${player.getPlayerName}">선수이름</a></td>
-                <td th:text="${player.getTeamId}">팀 번호</td>
+                <td><a href="#" th:text="${playerBy.getPlayerName()}">선수이름</a></td>
+                <td th:text="${playerBy.getTeamId()}">팀 번호</td>
             </tr>
             </tbody>
         </table>
