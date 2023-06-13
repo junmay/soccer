@@ -25,8 +25,11 @@ public class TeamController {
 
     @GetMapping("/teamInfo")
     public String teamInfo(){
-        return "/teamInfo.html";
+        return "teamInfo";
     }
 
-
+    @GetMapping("/teamInfo/club/chelsea")
+    public String chelsea() {
+        return "club/chelsea";
+    }
 }
