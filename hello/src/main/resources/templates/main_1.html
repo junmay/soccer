@@ -27,9 +27,13 @@
 <div class="section">
     <div class="match">
         <!-- 타임리프 연동 태그 수정필요 -->
+
         <table>
+<!--            <ul>-->
+<!--                <li th:each="match : ${matches}" th:text="${match}"></li>-->
+<!--            </ul>-->
         <tr th:each="match : ${matches}">
-            <td th:text="${match.getTeamId()}"></td>
+            <td th:text="${match.getTeam1Id()}"></td>
             <td th:text="${match.getTeam2Id()}"></td>
             <td th:text="${match.getMatchId()}"></td>
             <td th:text="${match.getMatchDate()}"></td>

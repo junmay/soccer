@@ -86,7 +86,7 @@ public class MyBatisConfig {
         return new MyBatisMatchRepository(matchMapper);
     }
     @Bean
-    public MatchServi matchService() {
+    public MatchServi matchService(){
         return new MatchService(matchRepository());
     }
 }
