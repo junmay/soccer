@@ -5,10 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import soccer.hello.domain.Match;
 import soccer.hello.service.LeagueServi;
 import soccer.hello.service.MatchServi;
@@ -33,12 +30,34 @@ public class MatchController {
 //    }
 
 
-    @GetMapping ("/matches")
-    public String getAllMatches(Model model) {
-        List<Match> matches = matchService.getAllMatches();
-        log.info(matches+" ");
+//    @GetMapping ("/matches")
+//    public String getAllMatches() {
+//
+//        return "main_1";
+//    }
+      @PostMapping("/matches")
+      public String getAllMatches(Model model) {
+          List<Match> matches = matchService.getAllMatches();
+          model.addAttribute("matches",matches);
+          return "redirect:/main_1";
 
-        model.addAttribute("matches",matches);
-        return "main_1";
-    }
+      }
+//    @PostMapping("/matches")
+//    public String getAllMatches(Model model){
+//        List<Match> matches = matchService.getAllMatches();
+//        log.info("getAllmatches");
+//        model.addAttribute("matches",matches);
+//        return "redirect:main_1";
+//    }
+
+//    @PostMapping("/matches/{matchesId}")
+//    public String getAllMatchesss(Model model){
+//        List<Match> matches = matchService.getAllMatches();
+//        log.info("getAllmatches sssss");
+//        model.addAttribute("matches",matches);
+//
+//        return "redirect:matches/";
+//    }
+
+
 }
