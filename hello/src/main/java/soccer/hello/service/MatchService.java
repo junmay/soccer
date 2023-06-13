@@ -18,7 +18,7 @@ public class MatchService implements MatchServi{
 
     private  final MatchRepository matchRepository;
 
-
+    @Override
     public List<Match> getAllMatches(){
 
         log.info("안녕하세요 겟 올 매치 입니다. "
