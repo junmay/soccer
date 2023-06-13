@@ -8,6 +8,7 @@ import soccer.hello.domain.Player;
 import soccer.hello.Repository.PlayerRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Slf4j
@@ -36,5 +37,10 @@ public class MyBatisPlayerRepository implements PlayerRepository {
     @Override
     public List<Player> getAllPlayers() {
         return playerMapper.getAllPlayers();
+    }
+
+    @Override
+    public Optional<Player> findPlayer(int playerId){
+        return playerMapper.findPlayer(playerId);
     }
 }

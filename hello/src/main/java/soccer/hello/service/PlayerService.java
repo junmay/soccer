@@ -6,6 +6,7 @@ import soccer.hello.domain.Player;
 import soccer.hello.Repository.PlayerRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +18,10 @@ public class PlayerService implements PlayerServi{
 
     public List<Player> getAllPlayers(){
         return playerRepository.getAllPlayers();
+    }
+
+    public Optional<Player> findPlayer(int playerId){
+        return playerRepository.findPlayer(playerId);
     }
 
 
