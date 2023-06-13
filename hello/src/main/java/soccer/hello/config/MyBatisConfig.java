@@ -32,6 +32,7 @@ public class MyBatisConfig {
     private final LeagueMapper leagueMapper;
     private final TeamMapper teamMapper;
     private final PlayerMapper playerMapper;
+    private final MatchMapper matchMapper;
 
 
     @Bean
@@ -82,7 +83,10 @@ public class MyBatisConfig {
     }
     @Bean
     public MatchRepository matchRepository() {
-        return new MatchRepository(matchMapper);
+        return new MyBatisMatchRepository(matchMapper);
     }
-
+    @Bean
+    public MatchServi matchService() {
+        return new MatchService(matchRepository());
+    }
 }
