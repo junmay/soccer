@@ -20,7 +20,7 @@ public class PlayerService implements PlayerServi{
         return playerRepository.getAllPlayers();
     }
 
-    public Optional<Player> findPlayer(int playerId){
+    public Optional<Player> findPlayer(Long playerId){
         return playerRepository.findPlayer(playerId);
     }
 
