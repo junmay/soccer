@@ -7,7 +7,7 @@ public class Match {
     private int matchId;
     private int teamId;
     private int team2Id;
-    private String date;
+    private String matchDate;
 
     @Override
     public String toString() {
@@ -15,7 +15,7 @@ public class Match {
                 "matchId=" + matchId +
                 ", teamId='" + teamId + '\'' +
                 ", team2Id='" + team2Id + '\'' +
-                  ", date='"+ date +'\''+
+                  ", date='"+ matchDate +'\''+
                 '}';
     }
 }
