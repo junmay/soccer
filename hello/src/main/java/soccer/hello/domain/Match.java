@@ -9,6 +9,13 @@ public class Match {
     private int team2Id;
     private String matchDate;
 
+    public Match(int matchId, int team1Id, int team2Id, String matchDate) {
+        this.matchId = matchId;
+        this.team1Id = team1Id;
+        this.team2Id = team2Id;
+        this.matchDate = matchDate;
+    }
+
     @Override
     public String toString() {
         return "Match{" +

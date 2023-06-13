@@ -23,7 +23,7 @@ public class MatchController {
     private final MatchServi matchService;
     private final MatchMapper matchMapper;
 
-    @RequestMapping("/matches")
+    @PostMapping("/matches")
     public String getAllMatches(Model model) {
         log.info("dddd");
         log.info(matchService.getAllMatches() + "");
