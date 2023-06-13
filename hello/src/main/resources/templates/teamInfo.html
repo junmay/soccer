@@ -13,10 +13,10 @@
 </head>
 <body>
 
-<div class="header" th:include="header.html">
+<div class="header" th:insert="~{header.html}">
 
 </div>
-<div class="nav" th:include="nav.html">
+<div class="nav" th:insert="~{nav.html}">
 
 </div>
 <div class="frame1">
@@ -75,7 +75,7 @@
 </div>
 </div>
 
-<footer class="footer" th:include="footer.html">
+<footer class="footer" th:insert="~{footer.html}">
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
