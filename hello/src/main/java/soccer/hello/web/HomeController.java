@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
-@RequestMapping("/home_1")
+//@RequestMapping("/homae")
 @RequiredArgsConstructor
 @Controller
 public class HomeController {
 
-    @GetMapping("/home_1")
-    public String main_1() {
-        return "main_1";
+    @GetMapping("/")
+    public String main() {
+        return "home_1";
     }
 }
