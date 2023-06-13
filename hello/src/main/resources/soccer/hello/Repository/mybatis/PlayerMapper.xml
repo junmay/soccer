@@ -5,4 +5,6 @@
     <select id="getAllPlayers" resultType="Player">
         SELECT player_id, player_name, team_id FROM player
     </select>
+
+
 </mapper>
