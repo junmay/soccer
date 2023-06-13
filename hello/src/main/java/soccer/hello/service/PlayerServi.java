@@ -10,7 +10,7 @@ public interface PlayerServi {
 
     public List<Player> getAllPlayers();
 
-    public Optional<Player> findPlayer(Long playerId);
+    public List<Player> findPlayer(Long playerId);
 
 
 

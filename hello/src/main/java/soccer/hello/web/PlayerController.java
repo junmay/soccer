@@ -6,8 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import soccer.hello.domain.Player;
 import soccer.hello.service.PlayerServi;
+
+import java.util.List;
 
 //@RestController
 @Controller
@@ -35,26 +38,24 @@ public class PlayerController {
 
 //    @PostMapping
     public String findPlayer(){
-//        Player player = playerService.findPlayer(playerId).get();
-//        log.info(player+"");
+        int playerId=0;
+        Player player = playerService.findPlayer(playerId).get();
+        log.info(player+"");
 
         return "redircet:/p";
     }
 
-//    @GetMapping("/searchp")
+    @GetMapping("/searchp")
     public String searchPlayer(){
-        return "searchPlayer";
+        return "/searchplayer";
     }
 
-    @GetMapping("/searchPlayer")
+    @GetMapping("/searchplayer")
     public String playerBy(@ModelAttribute("playerSearch")Player player, Model model) {
 
-        log.info("PlayerController \n \n \n 매서드는실행완료");
         Player playerBy = playerService.findPlayer(player.getPlayerId()).get();
-//        log.info("PlayerController");
-        log.info("PlayerController] playerBy = " + playerBy);
         model.addAttribute("playerBy", playerBy);
-        return "/searchPlayer";
+        return "searchplayer";
     }
 
 

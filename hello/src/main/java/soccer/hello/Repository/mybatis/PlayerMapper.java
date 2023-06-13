@@ -11,6 +11,5 @@ import java.util.Optional;
 @Mapper
 public interface PlayerMapper {
     List<Player> getAllPlayers();
-
-    Optional<Player> findPlayer(Long playerId);
+    List<Player> findPlayer(Long playerId);
 }
