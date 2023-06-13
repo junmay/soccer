@@ -25,6 +25,9 @@ public class HomeController {
         return "main_1";
     }
 
+
+
+
 //    @GetMapping("loginGo")
     public String loginGo(){
         return "/login";
