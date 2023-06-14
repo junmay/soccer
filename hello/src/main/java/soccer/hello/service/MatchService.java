@@ -45,7 +45,15 @@ public class MatchService implements MatchServi{
         return matchRepository.getAllMatches();
     }
 
-
+    public List<Match> getTeamMatchesCehlsea() {
+        List<Match> findMatch = matchRepository.getAllMatches();
+            if(getAllMatches().equals("chelsea")){
+            for (Match teamMatch : findMatch) {
+                System.out.println(teamMatch);
+            }findMatch.get(0);
+        }
+        return getTeamMatchesCehlsea();
+    }
 
 
 //    public LeagueService(LeagueMapper leagueMapper) {

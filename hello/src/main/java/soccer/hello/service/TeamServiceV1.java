@@ -22,11 +22,6 @@ public class TeamServiceV1 implements TeamService{
     }
 
 
-    public List<Team> getChelsea() {
-        Team chel = new Team();
-        chel.getTeamName().equals("chelsea");
-        return getChelsea();
-    }
 
 
     //    public LeagueService(LeagueMapper leagueMapper) {
