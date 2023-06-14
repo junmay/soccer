@@ -24,6 +24,7 @@ public class TeamController {
 //        return leagueService.getAllLeagues();
 //    }
 
+
     @GetMapping("/teamInfo")
     public String teamInfo(){
         return "teamInfo";

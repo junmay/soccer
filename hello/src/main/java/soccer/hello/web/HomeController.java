@@ -27,12 +27,14 @@ public class HomeController {
 
 
 
-
 //    @GetMapping("loginGo")
     public String loginGo(){
         return "/login";
     }
 
-
+//    @GetMapping("searchPlayer")
+//    public String search() {
+//        return "searchPlayer";
+//    }
 
 }
