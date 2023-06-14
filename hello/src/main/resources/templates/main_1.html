@@ -38,8 +38,8 @@
 <!--            </ul>-->
         <tr th:each="match : ${matches}">
             <td th:text="${match.getTeam1Id()}"></td>
-            <td th:text="${match.getTeam2Id()}"></td>
             <td th:text="${match.getMatchId()}"></td>
+            <td th:text="${match.getTeam2Id()}"></td>
             <td th:text="${match.getMatchDate()}"></td>
         </tr>
         </table>
