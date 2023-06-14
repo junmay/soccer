@@ -33,7 +33,7 @@ public class MatchService implements MatchServi{
 
         List<Match> matchs = matchRepository.getAllMatches();
 
-        return
+        return matchRepository.getAllMatches();
     }
 
 
