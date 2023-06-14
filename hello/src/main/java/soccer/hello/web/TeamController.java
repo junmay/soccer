@@ -1,11 +1,16 @@
 package soccer.hello.web;
 
+import ch.qos.logback.core.model.Model;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import soccer.hello.domain.Team;
 import soccer.hello.service.PlayerServi;
 import soccer.hello.service.TeamService;
+
+import java.util.List;
 
 //@RestController
 @Controller
@@ -31,7 +36,8 @@ public class TeamController {
     }
     //   ============== 팀 ==================
     @GetMapping("/teamInfo/club/chelsea")
-    public String chelsea() {
+    public String chelsea(@ModelAttribute("chelsea") Team team, Model model) {
+
         return "club/chelsea";
     }
     @GetMapping("/teamInfo/club/liverpool")

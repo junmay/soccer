@@ -13,7 +13,8 @@ public interface TeamRepository {
 //    Optional<Member> findById(String memberId);
 
 
-    List<Team> getAllTeam();
+    public List<Team> getAllTeam();
+
 
 
 }
