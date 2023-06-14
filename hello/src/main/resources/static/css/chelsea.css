@@ -6,8 +6,9 @@
     padding: 0px;
 }
 .mark {
+    position: absolute;
     display: inline-block;
-    padding-left: 100px;
+    left: 100px;
 }
 .clubName {
     position: relative;
