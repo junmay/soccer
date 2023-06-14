@@ -19,20 +19,23 @@ public class HomeController {
     public String home2() {
         return "home_1";
     }
-
     @GetMapping("main_1")
     public String home() {
         return "main_1";
     }
+    @GetMapping("/home_1.html")
+    public String homePage() {
+        return "home_1";
 
-
-
+    }
+    @GetMapping("/teamInfo.html")
+    public String teamPage() {
+        return "teamInfo";
+    }
 
 //    @GetMapping("loginGo")
     public String loginGo(){
         return "/login";
     }
-
-
 
 }
