@@ -42,6 +42,9 @@ public class MatchService implements MatchServi{
 //        int team1Score = match1.getScore1();
 //        int team2Score = match1.getScore2();
 
+
+        matchs.stream().filter(a-> a.equals("chelsea")).toArray();
+
         return matchRepository.getAllMatches();
     }
 

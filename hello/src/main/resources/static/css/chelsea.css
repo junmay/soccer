@@ -3,16 +3,16 @@
     padding: 20px;
     background-color: #1a5cc6;
     height: 200px;
-    padding: 0px;
+    padding: 100px;
 }
 .mark {
-    position: absolute;
+    /*position: absolute;*/
     display: inline-block;
     left: 100px;
 }
 .clubName {
-    position: relative;
-    display: inline-block;
+    /*position: relative;*/
+    /*display: inline-block;*/
     text-shadow: 3px 3px black;
     background-color: #1a5cc6;
     color: white;
@@ -20,12 +20,12 @@
     font-size: 50px;
 }
 .box1 {
-    position: absolute;
+    /*position: absolute;*/
     height: 35px;
     width: 100px;
     background: white;
-    left: 300px;
-    top: 158px;
+    /*left: 300px;*/
+    /*top: 158px;*/
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     text-align: center;
@@ -34,12 +34,12 @@
     background-color: #CCCCCC;
 }
 .box2 {
-    position: absolute;
+    /*position: absolute;*/
     height: 35px;
     width: 100px;
     background: white;
-    left: 410px;
-    top: 158px;
+    /*left: 410px;*/
+    /*top: 158px;*/
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     text-align: center;
@@ -52,4 +52,10 @@
 }
 .box2:hover {
     background-color: pink;
+}
+
+.nav{
+    box-sizing: border-box;
+
+
 }
