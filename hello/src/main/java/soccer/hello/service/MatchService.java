@@ -39,8 +39,8 @@ public class MatchService implements MatchServi{
         match1.getMatchId();
         match1.getTeam1Id();
         match1.getTeam2Id();
-        int team1Score = match1.getScore1();
-        int team2Score = match1.getScore2();
+//        int team1Score = match1.getScore1();
+//        int team2Score = match1.getScore2();
 
         return matchRepository.getAllMatches();
     }
