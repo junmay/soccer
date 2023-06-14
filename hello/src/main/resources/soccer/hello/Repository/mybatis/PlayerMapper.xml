@@ -2,7 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="soccer.hello.Repository.mybatis.PlayerMapper">
+
     <select id="getAllPlayers" resultType="Player">
-        SELECT player_id, player_name, team_id FROM player
+        SELECT player_id, player_name, team_id
+        FROM player
     </select>
+
+    <select id="findPlayer" resultType="player">
+        select player_id, player_name, team_id
+        from player
+        <where>
+        <if test="playerId != null">
+        And player_id = #{playerId}
+        </if>
+        </where>
+    </select>
+
+
+
+
+
+
 </mapper>

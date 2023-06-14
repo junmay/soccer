@@ -26,7 +26,7 @@ public class LoginController {
 
     private final MemberService memberService;
 
-    @GetMapping("/welcome")
+//    @GetMapping("/welcome")
     public String hihi()
     {
         return "/welcome.html";

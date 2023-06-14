@@ -1,71 +1,24 @@
-<!DOCTYPE html> <!---->
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<link th:href="@{/css/manchester.css}"
+      href="css/manchester.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <title>manchester</title>
+    <link th:href="@{/css/manchester.css}"
+          href="../../static/css/manchester.css" rel="stylesheet">
     <style>
-        .header1 {
-            width: 100%;
-            padding: 20px;
-            background-color: #c70101;
-            height: 200px;
-            padding: 0px;
-        }
-        .mark {
-            display: inline-block;
-            padding-left: 100px;
-        }
-        .clubName {
-            position: relative;
-            display: inline-block;
-            text-shadow: 3px 3px black;
-            background-color: #c70101;
-            color: white;
-            bottom: 80px;
-            font-size: 50px;
-        }
-        .box1 {
-            position: absolute;
-            height: 35px;
-            width: 100px;
-            background: white;
-            left: 300px;
-            top: 158px;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            text-align: center;
-            padding-top: 15px;
-            font-size: 20px;
-            background-color: #CCCCCC;
-        }
-        .box2 {
-            position: absolute;
-            height: 35px;
-            width: 100px;
-            background: white;
-            left: 410px;
-            top: 158px;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            text-align: center;
-            padding-top: 15px;
-            font-size: 20px;
-        }
 
-        .box1:hover {
-            background-color: pink;
-        }
-        .box2:hover {
-            background-color: pink;
-        }
     </style>
 </head>
 <body>
 <div class="header1">
-    <img class="mark" src="images/맨유%20마크.png" alt="" width="200" height="180">
+    <img class="mark" src="/image/mark/manchesterMark.png" alt="" width="200" height="180">
     <h1 class="clubName">Manchester United</h1>
-    <a href="manchester.html"><div class="box1">일정</div></a>
-    <a href="../club/squad/manchesterSquad.html"><div class="box2">선수단</div></a>
+    <a href="manchester.html" th:href="@{/teamInfo/club/manchester}"><div class="box1">일정</div></a>
+    <a href="../club/squad/manchesterSquad.html" th:href="@{/squad/manchesterSquad}">
+        <div class="box2">선수단</div></a>
 </div>
 </body>
 </html>

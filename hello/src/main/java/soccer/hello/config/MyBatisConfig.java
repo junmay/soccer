@@ -4,12 +4,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import soccer.hello.Repository.PlayerRepository;
+import soccer.hello.Repository.*;
 import soccer.hello.Repository.mybatis.*;
+import soccer.hello.domain.Match;
 import soccer.hello.service.*;
-import soccer.hello.Repository.TeamRepository;
-import soccer.hello.Repository.LeagueRepository;
-import soccer.hello.Repository.MemberRepository;
+
+import java.util.List;
 
 /**
  * @Configuration 어노테이션은 스프링에서 Java 기반의 설정 클래스임을 나타내는 어노테이션입니다.
@@ -32,6 +32,7 @@ public class MyBatisConfig {
     private final LeagueMapper leagueMapper;
     private final TeamMapper teamMapper;
     private final PlayerMapper playerMapper;
+    private final MatchMapper matchMapper;
 
 
     @Bean
@@ -80,13 +81,12 @@ public class MyBatisConfig {
     public PlayerServi playerService(){
         return new PlayerService(playerRepository());
     }
-
-
-
-
-
-
-
-
-
+    @Bean
+    public MatchRepository matchRepository() {
+        return new MyBatisMatchRepository(matchMapper);
+    }
+    @Bean
+    public MatchServi matchService(){
+        return new MatchService(matchRepository());
+    }
 }

@@ -8,6 +8,7 @@ import soccer.hello.domain.Player;
 import soccer.hello.Repository.PlayerRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Slf4j
@@ -17,13 +18,6 @@ public class MyBatisPlayerRepository implements PlayerRepository {
 
 //    private final MemberMapper memberMapper;
     private final PlayerMapper playerMapper;
-
-//    @Override
-//    public Member save(Member member) {
-//        log.info("itemMapper class={}", memberMapper.getClass());
-//        memberMapper.save(member);
-//        return member;
-//    }
 
 
 //    @Override
@@ -36,5 +30,12 @@ public class MyBatisPlayerRepository implements PlayerRepository {
     @Override
     public List<Player> getAllPlayers() {
         return playerMapper.getAllPlayers();
+    }
+
+    @Override
+    public List<Player> findPlayer(Integer playerId){
+        log.info("MyBatisPlayerRepository] playerId = " + playerId + "\n");
+
+        return playerMapper.findPlayer(playerId);
     }
 }

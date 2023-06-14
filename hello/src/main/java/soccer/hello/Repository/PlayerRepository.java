@@ -4,6 +4,7 @@ import soccer.hello.domain.League;
 import soccer.hello.domain.Player;
 
 import java.util.List;
+import java.util.Optional;
 
 
 public interface PlayerRepository {
@@ -16,6 +17,8 @@ public interface PlayerRepository {
 
 
     public List<Player> getAllPlayers();
+
+    public List<Player> findPlayer(Integer playerId);
 
 
 }

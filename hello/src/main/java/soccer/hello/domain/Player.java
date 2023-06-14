@@ -5,15 +5,15 @@ import lombok.Data;
 
 @Data
 public class Player {
-    private int teamId;
-    private String playerName;
-    private int playerId;
 
+    private String playerName;
+    private Integer playerId;
+    private Integer teamId;
 
 
     @Override
     public String toString() {
-        return "League{" +
+        return "{" +
                 "teamId=" + teamId +
                 ", playerName='" + playerName + '\'' +
                 ", playerId='" + playerId + '\'' +
