@@ -29,6 +29,13 @@ public class MatchService implements MatchServi{
        return matchRepository.getAllMatches();
     }
 
+    public List<Match> arrayMatches(){
+
+        List<Match> matchs = matchRepository.getAllMatches();
+
+        return
+    }
+
 
 
 
