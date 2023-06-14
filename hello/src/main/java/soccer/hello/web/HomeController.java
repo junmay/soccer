@@ -24,7 +24,14 @@ public class HomeController {
     public String home() {
         return "main_1";
     }
-
+    @GetMapping("/home_1.html")
+    public String homepage() {
+        return "home_1";
+    }
+    @GetMapping("/teamInfo.html")
+    public String teampage() {
+        return "teamInfo";
+    }
 
 
 
