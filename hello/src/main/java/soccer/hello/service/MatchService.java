@@ -32,7 +32,15 @@ public class MatchService implements MatchServi{
     public List<Match> arrayMatches(){
 
         List<Match> matchs = matchRepository.getAllMatches();
-        matchs.get(matchRepository.getAllMatches())
+
+        Match match1 = matchs.get(0);
+        Match match2 = matchs.get(1);
+
+        match1.getMatchId();
+        match1.getTeam1Id();
+        match1.getTeam2Id();
+        int team1Score = match1.getScore1();
+        int team2Score = match1.getScore2();
 
         return matchRepository.getAllMatches();
     }
