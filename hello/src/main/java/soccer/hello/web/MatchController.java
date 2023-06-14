@@ -23,15 +23,30 @@ public class MatchController {
     private final MatchServi matchService;
     private final MatchMapper matchMapper;
 
-    @PostMapping("/matches")
-    public String getAllMatches(Model model) {
+//    @PostMapping("/matches")
+    public String getAllMatches_2(Model model) {
         log.info("dddd");
         log.info(matchService.getAllMatches() + "");
         List<Match> matches = matchService.getAllMatches();
         model.addAttribute("matches", matches);
         return "main_1";
     }
+
+    @GetMapping("/matches")
+    public String getAllMatches( Model model){
+
+
+        List<Match> matches = matchService.getAllMatches();
+        log.info("MatchController] \n \n matches = " + matches);
+        model.addAttribute("matches", matches);
+
+        return "main_1";
+    }
+
+
+
 }
+
 
 //    @RequestMapping("/matches")
 //    public String getAllMatches(Model model) {

@@ -3,6 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="soccer.hello.Repository.mybatis.MatchMapper">
     <select id="getAllMatches" resultType="Match">
-        SELECT match_id, team1_id, team2_id, match_date FROM match
+
+        SELECT match_id, team1_id, team2_id, match_date FROM match2
     </select>
 </mapper>
+
+
