@@ -21,7 +21,7 @@ public class TeamServiceV1 implements TeamService{
        return teamRepository.getAllTeam();
     }
 
-    @Override
+//    @Override
     public List<Team> getTeamList() {
         return null;
     }
