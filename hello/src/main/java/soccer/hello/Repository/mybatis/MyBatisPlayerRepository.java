@@ -33,9 +33,8 @@ public class MyBatisPlayerRepository implements PlayerRepository {
     }
 
     @Override
-    public List<Player> findPlayer(Integer playerId){
-        log.info("MyBatisPlayerRepository] playerId = " + playerId + "\n");
+    public List<Player> findPlayer(Integer playerId, String playerName, Integer teamId){
 
-        return playerMapper.findPlayer(playerId);
+        return playerMapper.findPlayer(playerId, playerName, teamId);
     }
 }

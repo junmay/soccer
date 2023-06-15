@@ -37,7 +37,7 @@ public class MyBatisMatchRepository implements MatchRepository {
 
     @Override
     public List<Match> getAllMatches() {
-        log.info("\n\n\n\n\n\n 안녕하세요 매치 레파지토리입니다.");
+//        log.info("\n\n\n\n\n\n 안녕하세요 매치 레파지토리입니다.");
 
         return matchMapper.getAllMatches();
     }
