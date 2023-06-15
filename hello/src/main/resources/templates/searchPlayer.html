@@ -4,7 +4,7 @@
 <style>
 
 </style>
-<link th:href="@{/css/searchplayer.css}"
+<link th:href="@{/css/main_1.css}"
       href="css/searchplayer.css" rel="stylesheet">
 <head>
     <meta charset="utf-8">
@@ -36,17 +36,26 @@
 
 
     <form th:object="${playerSearch}" method="get" class="form-inline">
-        <div class="row">
-            <div class="col">
-                <input type="text" th:field="*{playerId}" />
+        <div STYLE="border: solid black 2px">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+               선수 번호 검색:  <input type="text" th:field="*{playerId}" />
             </div>
-            <div class="col">
-                <input type="text" th:field="*{playerName}" />
+            <div>
+             선수 이름 검색:   <input type="text" th:field="*{playerName}" />
             </div>
-            <div class="col">
-                <input type="text" th:field="*{teamId}"/>
+            <div>
+              팀 번호 검색:  <input type="text" th:field="*{teamId}"/>
             </div>
-            <div class="col">
+            <div>
                 <button type="submit" class="btn btn-secondary mb-2">검색</button>
             </div>
         </div>
