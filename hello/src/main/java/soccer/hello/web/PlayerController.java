@@ -53,9 +53,11 @@ public class PlayerController {
     @GetMapping("/searchPlayer")
     public String playerBy(@ModelAttribute("playerSearch")Player player, Model model) {
 //        public String playerBy(Player player, Model model) {
-        List<Player> playerBy = playerService.findPlayer(player.getPlayerId());
+        log.info("PlayerController] player = " + player);
+        List<Player> playerBy = playerService.findPlayer(player.getPlayerId(), player.getPlayerName(), player.getTeamId());
 //        Player playerBy = playerService.findPlayer(player.getPlayerId());
         model.addAttribute("playerBy", playerBy);
+//        return "/searchPlayer";
         return "/searchPlayer";
     }
 

@@ -10,6 +10,7 @@ import soccer.hello.Repository.mybatis.MatchMapper;
 import soccer.hello.domain.League;
 import soccer.hello.domain.Match;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -48,14 +49,33 @@ public class MatchService implements MatchServi{
         return matchRepository.getAllMatches();
     }
 
+    @Override
     public List<Match> getTeamMatchesCehlsea() {
         List<Match> findMatch = matchRepository.getAllMatches();
-            if(getAllMatches().equals("chelsea")){
-            for (Match teamMatch : findMatch) {
-                System.out.println(teamMatch);
-            }findMatch.get(0);
-        }
-        return getTeamMatchesCehlsea();
+//            if(getAllMatches().equals("chelsea")){
+//            for (Match teamMatch : findMatch) {
+//                System.out.println(teamMatch);
+//            }
+//        }
+//        Match ss = findMatch.get(0);
+//            int x=0;
+
+            List<Match> chelsea = new ArrayList<>();
+
+            for(int y=0;y<findMatch.size();y++){
+                if((findMatch.get(y).getTeam1Id()==0) || findMatch.get(y).getTeam2Id()==0)
+                System.out.println(findMatch.get(y).getMatchId());
+
+                chelsea.add(findMatch.get(y));
+
+
+            }
+
+
+
+//        return getTeamMatchesCehlsea();
+
+        return chelsea;
     }
 
 

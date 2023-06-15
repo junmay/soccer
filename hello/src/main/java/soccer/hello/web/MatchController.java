@@ -41,6 +41,22 @@ public class MatchController {
 
         return "main_1";
     }
+    @GetMapping("/test")
+    public String testAll(){
+
+        matchService.getTeamMatchesCehlsea();
+
+        return "main_1";
+    }
+
+    @GetMapping
+    public String name(){
+
+
+        return null;
+    }
+
+
 
 
 

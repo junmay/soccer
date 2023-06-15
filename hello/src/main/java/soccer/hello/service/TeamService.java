@@ -11,7 +11,7 @@ public interface TeamService {
 
     public List<Team> getAllTeam();
 
-    public List<Team> getTeamList();
+//    public List<Team> getTeamList();
 
 
 }

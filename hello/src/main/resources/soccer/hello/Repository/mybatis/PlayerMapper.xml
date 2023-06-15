@@ -15,6 +15,13 @@
         <if test="playerId != null">
         And player_id = #{playerId}
         </if>
+        <if test="playerName != null and playerName != ''">
+            and player_name LIKE '%' || #{playerName} || '%'
+        </if>
+        <if test="teamId != null">
+            and team_id = #{teamId}
+        </if>
+
         </where>
     </select>
 

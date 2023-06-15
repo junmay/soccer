@@ -10,7 +10,7 @@ public interface PlayerServi {
 
     public List<Player> getAllPlayers();
 
-    public List<Player> findPlayer(Integer playerId);
+    public List<Player> findPlayer(Integer playerId, String playerName, Integer teamId);
 
 
 

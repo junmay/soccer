@@ -25,9 +25,9 @@ public class PlayerService implements PlayerServi{
     }
 
     @Override
-    public List<Player> findPlayer(Integer playerId){
+    public List<Player> findPlayer(Integer playerId, String playerName, Integer teamId){
         log.info("PlayerService \n" + playerId);
-        return playerRepository.findPlayer(playerId);
+        return playerRepository.findPlayer(playerId, playerName, teamId);
     }
 
 
