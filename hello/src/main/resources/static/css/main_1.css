@@ -175,3 +175,7 @@ li {
 .bd-mode-toggle {
     z-index: 1500;
 }
+
+.navbar-nav {
+    width: 300px;
+}
