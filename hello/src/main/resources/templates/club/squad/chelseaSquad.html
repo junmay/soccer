@@ -1,19 +1,114 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-<meta charset="utf-8">
-<link th:href="@{/css/chelseaSquad.css}"
-      href="css/chelseaSquad.css" rel="stylesheet">
+<!DOCTYPE html> <!---->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>chelsea</title>
+    <style>
+        .header1 {
+            width: 100%;
+            padding: 20px;
+            background-color: #1a5cc6;
+            height: 200px;
+            padding: 0px;
+        }
+        .mark {
+            display: inline-block;
+            padding-left: 100px;
+        }
+        .clubName {
+            position: relative;
+            display: inline-block;
+            text-shadow: 3px 3px black;
+            background-color: #1a5cc6;
+            color: white;
+            bottom: 80px;
+            font-size: 50px;
+        }
+        .box1 {
+            position: absolute;
+            height: 35px;
+            width: 100px;
+            background: white;
+            left: 300px;
+            top: 158px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 20px;
+        }
+        .box2 {
+            position: absolute;
+            height: 35px;
+            width: 100px;
+            background: white;
+            left: 410px;
+            top: 158px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 20px;
+            background-color: #CCCCCC;
+        }
 
+        .box1:hover {
+            background-color: pink;
+        }
+        .box2:hover {
+            background-color: pink;
+        }
+        .container {
+            width: 80%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*flex-flow: column nowrap;*/
+            margin: 0 auto;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        .item {
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+            margin: 15px;
+            position: relative;
+        }
+        .item:hover img {
+            -webkit-filter: grayscale(100%) blur(3px);
+            filter: grayscale(100%) blur(3px);
+        }
+        .item .info {
+            color: #fff;
+            position: absolute; left: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.35s ease-in-out;
+        }
+        .item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .item:hover .info {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 <div class="header1">
-    <img class="mark" src="/image/mark/chelseaMark.png" alt="" width="200" height="200">
+    <img class="mark" src="../images/첼시%20마크.png" alt="" width="200" height="200">
     <h1 class="clubName">Chelsea</h1>
-    <a href="../chelsea.html"th:href="@{/teamInfo/club/chelsea}"><div class="box1">일정</div></a>
-    <a href="chelseaSquad.html" th:href="@{/squad/chelseaSquad}"><div class="box2">선수단</div></a>
+    <a href="../chelsea.html"><div class="box1">일정</div></a>
+    <a href="chelseaSquad.html"><div class="box2">선수단</div></a>
 </div>
 
 <div class="container">
@@ -25,8 +120,8 @@
 <!--                <p>케파 아리사발라가</p>-->
 <!--            </div>-->
 <!--        </a>-->
-        <a href="/squad/player" th:href="@{/player/kepa}">
-            <img src="/image/playerImage/케파.png"  alt="">
+        <a href="/squad/player">
+            <img src="images/케파.png" alt="">
             <div class="info">
                 <h3>Kepa Arrizabalaga</h3>
                 <p>케파 아리사발라가</p>
@@ -35,7 +130,7 @@
     </div>
     <div class="item item2">
         <a href="">
-        <img src="/image/playerImage/티아구실바.png" alt="">
+        <img src="images/티아구실바.png" alt="">
             <div class="info">
                 <h3>Thiago Silva</h3>
                 <p>티아고 실바</p>
@@ -44,7 +139,7 @@
     </div>
     <div class="item item3">
         <a href="">
-        <img src="/image/playerImage/칠웰.png" alt="">
+        <img src="images/칠웰.png" alt="">
             <div class="info">
                 <h3>Ben Chilwell</h3>
                 <p>벤 칠웰</p>
@@ -53,7 +148,7 @@
     </div>
     <div class="item item4">
         <a href="">
-        <img src="/image/playerImage/리스 제임스.png" alt="">
+        <img src="images/리스 제임스.png" alt="">
             <div class="info">
                 <h3>Reece James</h3>
                 <p>리스 제임스</p>
@@ -62,7 +157,7 @@
     </div>
     <div class="item item5">
         <a href="">
-        <img src="/image/playerImage/엔조.png" alt="">
+        <img src="images/엔조.png" alt="">
             <div class="info">
                 <h3>Enzo Fernandez</h3>
                 <p>엔조 페르난데즈</p>
@@ -71,7 +166,7 @@
     </div>
     <div class="item item6">
         <a href="">
-        <img src="/image/playerImage/마운트.png" alt="">
+        <img src="images/마운트.png" alt="">
             <div class="info">
                 <h3>Mason Mount</h3>
                 <p>메이슨 마운트</p>
@@ -80,7 +175,7 @@
     </div>
     <div class="item item7">
         <a href="">
-        <img src="/image/playerImage/갤러거.png" alt="">
+        <img src="images/갤러거.png" alt="">
             <div class="info">
                 <h3>Conor Gallagher</h3>
                 <p>코너 갤러거</p>
@@ -89,7 +184,7 @@
     </div>
     <div class="item item8">
         <a href="">
-        <img src="/image/playerImage/하베르츠.png" alt="">
+        <img src="images/하베르츠.png" alt="">
             <div class="info">
                 <h3>Kai Havertz</h3>
                 <p>카이 하베르츠</p>
