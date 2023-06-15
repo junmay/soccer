@@ -18,10 +18,13 @@
             <!--                <li th:each="match : ${matches}" th:text="${match}"></li>-->
             <!--            </ul>-->
             <tr th:each="match : ${matches}">
-                <td th:text="${match.getTeam1Id()}"></td>
-                <td th:text="${match.getMatchId()}"></td>
-                <td th:text="${match.getTeam2Id()}"></td>
-                <td th:text="${match.getMatchDate()}"></td>
+                 <td th:text="|매치 번호 :    ${match.getMatchId()}|"></td>
+
+              <td th:text="|  팀 1 :    ${match.getTeam1Id()}|"></td>
+
+
+                <td th:text="| 팀 2:${match.getTeam2Id()}|"></td>
+                <td th:text="|날짜 :${match.getMatchDate()}|"></td>
             </tr>
         </table>
     </div>
