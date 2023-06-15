@@ -11,4 +11,5 @@ import java.util.List;
 public interface MatchMapper {
     void save(Match match);
     List<Match> getAllMatches();
+    List<Match> arrayMatches();
 }

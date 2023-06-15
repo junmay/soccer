@@ -41,4 +41,10 @@ public class MyBatisMatchRepository implements MatchRepository {
 
         return matchMapper.getAllMatches();
     }
+
+    @Override
+    public List<Match> arrayMatches(){
+        log.info("안녕하세요 어레이 매치 입니다. ");
+        return matchMapper.arrayMatches();
+    }
 }

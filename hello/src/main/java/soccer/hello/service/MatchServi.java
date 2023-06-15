@@ -8,4 +8,5 @@ import java.util.List;
 public interface MatchServi {
 
     public List<Match> getAllMatches();
+    public List<Match> arrayMatches();
 }

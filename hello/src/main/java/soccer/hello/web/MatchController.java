@@ -33,8 +33,7 @@ public class MatchController {
     }
 
     @GetMapping("/matches")
-    public String getAllMatches( Model model){
-
+    public String getAllMatches(Model model){
 
         List<Match> matches = matchService.getAllMatches();
         log.info("MatchController] \n \n matches = " + matches);

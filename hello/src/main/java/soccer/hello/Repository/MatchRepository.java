@@ -15,6 +15,6 @@ public interface MatchRepository {
 
 
     List<Match> getAllMatches();
-
+    List<Match> arrayMatches();
 
 }

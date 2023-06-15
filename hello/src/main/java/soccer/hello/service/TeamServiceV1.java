@@ -21,6 +21,11 @@ public class TeamServiceV1 implements TeamService{
        return teamRepository.getAllTeam();
     }
 
+    @Override
+    public List<Team> getTeamList() {
+        return null;
+    }
+
 
     public List<Team> getChelsea() {
         Team chel = new Team();

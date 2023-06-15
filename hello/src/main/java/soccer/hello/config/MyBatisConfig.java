@@ -37,6 +37,7 @@ public class MyBatisConfig {
 
     @Bean
     public TeamRepository teamRepository(){
+
         return new MyBatisTeamRepository(teamMapper);
     }
 
