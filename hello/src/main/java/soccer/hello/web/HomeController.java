@@ -22,7 +22,7 @@ public class HomeController {
 
     @GetMapping("main_1")
     public String home() {
-        return "main_1";
+        return "main_1_(zz)";
     }
     @GetMapping("/home_1.html")
     public String homepage() {
